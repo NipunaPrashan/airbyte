@@ -271,7 +271,11 @@ spec:
         - name: USE_STREAM_CAPABLE_STATE
           valueFrom:
             configMapKeyRef:
+<<<<<<< HEAD
               name: { { include "common.names.fullname" . } }-env
+=======
+              name: {{ include "common.names.fullname" . }}-env
+>>>>>>> f6c945363d97bb094d7330ef26f4ae78a8cf3c9d
               key: USE_STREAM_CAPABLE_STATE
         {{- if .Values.worker.extraEnv }}
         {{ .Values.worker.extraEnv | toYaml | nindent 8 }}
